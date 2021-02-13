@@ -4,6 +4,7 @@ import{makeStyles} from '@material-ui/core/styles';
 import Title from './Title';
 import Card from './Card';
 import InputContainer from './Input/InputContainer';
+import InputCard from './Input/InputCard';
 
 const useStyle = makeStyles((theme)=>({
     root:{
@@ -25,6 +26,7 @@ export default function List () {
                 <Card/>
                 <Card/>
                 <InputContainer/>
+                <InputCard/>
             </Paper>
         </div>
     );
