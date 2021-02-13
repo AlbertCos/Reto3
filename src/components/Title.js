@@ -11,6 +11,17 @@ const useStyle = makeStyles((theme)=>({
     },
     editableTitle:{
         marginLeft:theme.spacing(1),
+        flexGrow:1,
+    },
+    editableTitleContainer:{
+        margin:theme.spacing(1),
+        display:"flex",
+    },
+    input:{
+        margin: theme.spacing(1),
+        "&:focus":{
+            backgroundColor:"#ddd",
+        }
     }
 }));
 
@@ -21,10 +32,10 @@ export default function Title() {
         <div>
             {open?(
             <div>
-            <InputBase value="Todo"/>
+            <InputBase value="Todo" inputProps={{className:classes.input,}} fullWidth onBlur = {()=>setOpen(!open)}/>
              </div>
             ):(
-            <div>
+            <div className={classes.editableTitleContainer}>
              <Typography onClick={()=>setOpen(!open)} className={classes.editableTitle}>
                 Todo
              </Typography>
