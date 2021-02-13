@@ -23,5 +23,5 @@ const data={
     },
     listIds:["list-1"],
 
-}
+};
 export default data;
