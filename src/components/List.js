@@ -1,8 +1,9 @@
 import React from 'react'
 import {Paper, Typography, CssBaseline} from '@material-ui/core';
-import{makeStyles} from '@material-ui/core/styles';
+import{makeStyles,createStyles} from '@material-ui/core/styles';
+import Title from './Title';
 
-const useStyle = makeStyles((theme)=>({
+const useStyle = makeStyles((theme)=>createStyles({
     root:{
         width:'300px',
         backgroundColor:'EBECF0',
@@ -16,8 +17,9 @@ export default function List () {
         <div>
             <Paper ClassName={classes.root}>
                 <CssBaseline/>
+
                 <Typography>
-                    Todo
+                    <Title/>
                 </Typography>
             </Paper>
         </div>
