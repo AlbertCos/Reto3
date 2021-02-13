@@ -29,7 +29,7 @@ const useStyle = makeStyles((theme)=>({
 
 export default function InputCard({setOpen, listId, type}) {
     const classes = useStyle();
-    const {addMoreCard} = useContext(storeApi);
+    const {addMoreCard, addMoreList} = useContext(storeApi);
     const [title, setTitle] = useState("");
 
     const handleOnChange =(e) =>{
@@ -44,6 +44,8 @@ export default function InputCard({setOpen, listId, type}) {
         }
         else{
             addMoreList(title);
+            setTitle("");
+            setOpen(false);
         }
  
     };

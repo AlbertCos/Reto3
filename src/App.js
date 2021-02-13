@@ -29,7 +29,7 @@ export default function App(){
       title,
     };
     const list = data.lists[listId];
-    list.cards=[...list.cards,newCard];
+    list.cards=[...list.cards, newCard];
 
     const newState = {
       ...data,
@@ -40,9 +40,25 @@ export default function App(){
     };
     setData(newState);
   };
+  const addMoreList = (title)=>{
+    const newListId = uuid();
+    const newList = {
+      id: newListId,
+      title,
+      cards: [],
+    };
+    const newState = {
+      listIds:[...data.listIds,newListId],
+      lists:{
+        ...data.lists,
+        [newListId]:newList,
+      },
+    };
+    setData(newState);
+  };
 
   return(
-    <storeApi.Provider value={{addMoreCard}}>
+    <storeApi.Provider value={{addMoreCard,addMoreList}}>
     <div className = {classes.root}>
       
       {data.listIds.map((listId)=>{
