@@ -5,8 +5,8 @@ import storeApi from "./components/utils/storeApi";
 
 export default function App(){
   const [data,setData]=useState(store);
-  const  addMoreCard = (title) =>{
-    console.log(title);
+  const  addMoreCard = (title,listId) =>{
+    console.log(title, listId);
 
   };
 
