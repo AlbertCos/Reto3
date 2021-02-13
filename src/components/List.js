@@ -7,7 +7,7 @@ import Card from './Card';
 const useStyle = makeStyles((theme)=>({
     root:{
         width:'300px',
-        backgroundColor:'EBECF0',
+        backgroundColor:'#EBECF0',
         marginLeft: theme.spacing(1),
     },
 }));
