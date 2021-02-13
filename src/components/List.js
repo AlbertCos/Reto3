@@ -3,7 +3,7 @@ import {Paper, Typography, CssBaseline} from '@material-ui/core';
 import{makeStyles,createStyles} from '@material-ui/core/styles';
 import Title from './Title';
 
-const useStyle = makeStyles((theme)=>createStyles({
+const useStyle = makeStyles((theme)=>({
     root:{
         width:'300px',
         backgroundColor:'EBECF0',
@@ -15,7 +15,7 @@ export default function List () {
     const classes = useStyle ();
     return (
         <div>
-            <Paper ClassName={classes.root}>
+            <Paper className={classes.root}>
                 <CssBaseline/>
 
                 <Typography>
