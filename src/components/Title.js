@@ -1,6 +1,7 @@
 import { Typography,InputBase } from '@material-ui/core';
 import React,{useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const useStyle = makeStyles((theme)=>({
     root:{
@@ -27,6 +28,7 @@ export default function Title() {
              <Typography onClick={()=>setOpen(!open)} className={classes.editableTitle}>
                 Todo
              </Typography>
+             <MoreHorizIcon />
              </div>
             )}  
         </div>
