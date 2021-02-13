@@ -32,12 +32,12 @@ export default function InputCard({setOpen}) {
         <div>
             <div >
             <Paper className={classes.card}>
-                <InputBase multiline fullWidth inputProps={{className:classes.input,}} placeholder="Enter the card title..."/>
+                <InputBase multiline onBlur={()=>setOpen(false)} fullWidth inputProps={{className:classes.input,}} placeholder="Enter the card title..."/>
             </Paper>
             </div>
             <div className={classes.confirm}>
                 <Button className={classes.btnConfirm} onClick={()=>setOpen(false)}>+ Add Card</Button>
-                <IconButton><ClearIcon/></IconButton>
+                <IconButton onClick={()=>setOpen(false)} ><ClearIcon/></IconButton>
             </div>
         </div>
     )
