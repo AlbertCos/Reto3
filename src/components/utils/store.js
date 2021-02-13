@@ -1,15 +1,15 @@
 const cards =[
 {
     id:"card-1",
-    content:"Meeting tomorrow with IT",
+    title:"Meeting tomorrow with IT",
 },
 {
     id:"card-2",
-    content:"Meeting tomorrow with compliance",
+    title:"Meeting tomorrow with compliance",
 },
 {
     id:"card-3",
-    content:"Meeting tomorrow with BOD",
+    title:"Meeting tomorrow with BOD",
 },
 ];
 

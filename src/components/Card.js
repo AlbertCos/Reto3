@@ -1,6 +1,5 @@
-import { Paper } from '@material-ui/core'
 import React from 'react';
-// import {Paper} from '@material-ui/core';
+import { Paper } from '@material-ui/core'
 import{makeStyles} from '@material-ui/core/styles';
 
 const useStyle = makeStyles((theme)=>({
@@ -15,7 +14,7 @@ export default function Card({card}) {
     const classes = useStyle ();
     return (
         <div>
-            <Paper className={classes.card}>{card.content}</Paper>
+            <Paper className={classes.card}>{card.title}</Paper>
         </div>
     );
 }

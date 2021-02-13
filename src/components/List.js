@@ -21,9 +21,9 @@ export default function List ({list}) {
             <Paper className={classes.root}>
                 <CssBaseline/>
                 <Title title={list.title}/>
-                {list.cards.map((card)=>{
+                {list.cards.map((card)=>(
                     <Card key={card.id} card={card}/>
-                })}
+                ))}
                 <InputContainer listId={list.id}/>
             </Paper>
         </div>
