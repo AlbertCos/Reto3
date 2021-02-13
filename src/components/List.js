@@ -26,7 +26,6 @@ export default function List () {
                 <Card/>
                 <Card/>
                 <InputContainer/>
-                <InputCard/>
             </Paper>
         </div>
     );
