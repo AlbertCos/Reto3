@@ -12,12 +12,16 @@ const useStyle = makeStyles((theme)=>({
     editableTitle:{
         marginLeft:theme.spacing(1),
         flexGrow:1,
+        fontSize:"1.2rem",
+        fontWeight:"bold",
     },
     editableTitleContainer:{
         margin:theme.spacing(1),
         display:"flex",
     },
     input:{
+        fontSize:"1.2rem",
+        fontWeight:"bold",
         margin: theme.spacing(1),
         "&:focus":{
             backgroundColor:"#ddd",
@@ -32,7 +36,7 @@ export default function Title() {
         <div>
             {open?(
             <div>
-            <InputBase value="Todo" inputProps={{className:classes.input,}} fullWidth onBlur = {()=>setOpen(!open)}/>
+            <InputBase  autoFocus value="Todo" inputProps={{className:classes.input,}} fullWidth onBlur = {()=>setOpen(!open)}/>
              </div>
             ):(
             <div className={classes.editableTitleContainer}>
