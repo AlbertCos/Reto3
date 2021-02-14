@@ -1,7 +1,8 @@
-import React, { useState } from'react';
+import React, { useEffect, useState } from'react';
 import {makeStyles} from '@material-ui/core/styles';
 import { Drawer, Grow } from '@material-ui/core';
 import colors from '../utils/colors';
+import { getImages } from '../utils/ImageApi';
 
 
 const useStyles = makeStyles ((theme)=>({
@@ -29,12 +30,20 @@ const useStyles = makeStyles ((theme)=>({
 }));
 
 
-export default function SideMenu({setOpenSideMenu,openSideMenu}){
+export default function SideMenu({setOpenSideMenu,openSideMenu, setNewBgImage}){
   const classes = useStyles();
   const [optionColor,setOptionColor]=useState(false);
   const [optionImage,setOptionImage]=useState(false);
+  const [images,setImage] = useState([]);
 
-
+const getListofImage = async()=>{
+    const listOfImages = await getImages();
+    console.log(listOfImages);
+    setImage(listOfImages);
+};
+    useEffect(()=>{
+     getListofImage();
+    },[])
 
   return ( 
   <div>
@@ -63,20 +72,26 @@ export default function SideMenu({setOpenSideMenu,openSideMenu}){
                     onClick={()=>{setOptionColor(true); setOptionImage(false);}}
                 ></div>
             </div>
-            {optionImage ? <Grow in={optionImage}>
+            {optionImage ? (
+            <Grow in={optionImage}>
                 <div className={classes.optContainer}>
-                    {colors.map((color,index)=>{
+                    {images.map((image,index)=>{
                         return(
                             <div 
-                             key={index} className={classes.box} 
+                             key={index} 
+                             className={classes.box} 
                              style={{
-                             backgroundColor:color,
-                        }}></div>
+                             backgroundImage:`url(${image.thumb})`,
+                             backgroundSize:"cover",
+                             backgroundRepeat:"no-repeat",
+                        }}
+                        onClick={()=>setNewBgImage(image.url)}
+                        ></div>
                     );
                 })}
                 </div>
             </Grow> 
-            : //Else
+            ):( //Else
             <Grow in={optionColor}>
                 <div className={classes.optContainer}>
                     {colors.map((color,index)=>{
@@ -85,13 +100,15 @@ export default function SideMenu({setOpenSideMenu,openSideMenu}){
                              key={index} className={classes.box} 
                              style={{
                              backgroundColor:color,
-                        }}></div>
+                            }}
+                            onClick={()=>setNewBgImage(color)}
+                        ></div>
                     );
                 })}
                 </div>
-            </Grow>}
+            </Grow>
             
-            
+        )}
         </div>
     </Drawer>
   </div>
