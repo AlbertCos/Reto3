@@ -11,7 +11,7 @@ import { DragDropContext, Droppable} from 'react-beautiful-dnd';
 const useStyle = makeStyles((theme)=>({
   root:{
     display:"flex",
-    minheight:"100vh",
+    minHeight:"100vh",
     width:"100%",
     overflowY:"auto",
   }
