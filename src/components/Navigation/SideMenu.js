@@ -21,7 +21,7 @@ const useStyles = makeStyles ((theme)=>({
         borderRadius:"9px",
         marginBottom:theme.spacing(2),
     },
-    optContainer:{
+    optionContainer:{
         display:"flex",
         flexWrap:"wrap",
         justifyContent:"space-around",
@@ -32,8 +32,8 @@ const useStyles = makeStyles ((theme)=>({
 
 export default function SideMenu({setOpenSideMenu,openSideMenu, setNewBgImage}){
   const classes = useStyles();
-  const [optionColor,setOptionColor]=useState(false);
-  const [optionImage,setOptionImage]=useState(false);
+  const [openOptionColor,setOpenOptionColor]=useState(false);
+  const [openOptionImage,setOpenOptionImage]=useState(false);
   const [images,setImage] = useState([]);
 
 const getListofImage = async()=>{
@@ -43,7 +43,7 @@ const getListofImage = async()=>{
 };
     useEffect(()=>{
      getListofImage();
-    },[])
+    },[]);
 
   return ( 
   <div>
@@ -57,24 +57,24 @@ const getListofImage = async()=>{
                     className={classes.box} 
                     style={{
                     backgroundSize:"cover",
-                    // backgroundImage:"url",
+                    backgroundImage:"url(http://wallup.net/wp-content/uploads/2016/01/137302-nature-Canada-landscape-lake-forest-mountain.jpg)",
                     backgroundRepeat:"no-repeat",
                     }}
-                    onClick={()=>{setOptionImage(true); setOptionColor(false);}}
+                    onClick={()=>{setOpenOptionImage(true); setOpenOptionColor(false);}}
                 ></div>
                 <div 
                     className={classes.box} 
                     style={{
                     backgroundSize:"cover",
-                    // backgroundImage:"url",
+                    backgroundImage:"url(https://totenart.com/noticias/wp-content/uploads/2015/06/colores-espectro-noticias-totenart.png)",
                     backgroundRepeat:"no-repeat",
                     }}
-                    onClick={()=>{setOptionColor(true); setOptionImage(false);}}
+                    onClick={()=> {setOpenOptionImage(false); setOpenOptionColor(true);}}
                 ></div>
             </div>
-            {optionImage ? (
-            <Grow in={optionImage}>
-                <div className={classes.optContainer}>
+            {openOptionImage ? (
+            <Grow in={openOptionImage}>
+                <div className={classes.optionContainer}>
                     {images.map((image,index)=>{
                         return(
                             <div 
@@ -92,8 +92,8 @@ const getListofImage = async()=>{
                 </div>
             </Grow> 
             ):( //Else
-            <Grow in={optionColor}>
-                <div className={classes.optContainer}>
+            <Grow in={openOptionColor}>
+                <div className={classes.optionContainer}>
                     {colors.map((color,index)=>{
                         return(
                             <div 

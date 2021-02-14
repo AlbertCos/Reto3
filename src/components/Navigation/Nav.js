@@ -1,10 +1,10 @@
-import React, { useState } from'react';
+import React, { useState } from 'react';
 import SideMenu from './SideMenu';
 import TopBar from './TopBar';
 
 
 
-export default function Nav(setBackgroundImage){
+export default function Nav({setBackgroundImage}){
     const [openSideMenu,setOpenSideMenu] = useState(false);
   return ( 
   <div>

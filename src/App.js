@@ -3,11 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Wrapper from './components/wrapper';
 import Nav from './components/Navigation/Nav';
 
-const useStyles = makeStyles ((theme)=>({
-  // root:{
-  //    background:"#383e56",
-  // },
-}));
+const useStyles = makeStyles ((theme)=>({}));
 
 
 export default function App(){
@@ -20,7 +16,8 @@ export default function App(){
       backgroundImage: `url(${backgroundImage})`,
       backgroundRepeat:"no-repeat",
       backgroundSize: "cover",
-    }}>
+    }}
+    >
     <Nav setBackgroundImage = {setBackgroundImage}/>
     <Wrapper/>
   </div>
