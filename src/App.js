@@ -5,6 +5,7 @@ import store from "./components/utils/store";
 import storeApi from "./components/utils/storeApi";
 import InputContainer from "./components/Input/InputContainer";
 import{makeStyles} from "@material-ui/core/styles";
+import { DragDropContext} from 'react-beautiful-dnd';
 
 
 const useStyle = makeStyles((theme)=>({
@@ -72,8 +73,15 @@ export default function App(){
      };
      setData(newState);
   };
+  const onDragEnd=(result)=>{
+    const{destination, source, draggableId} =result;
+    console.log("destination: ",destination,"source: ",source, draggableId);
+  }
   return(
     <storeApi.Provider value={{addMoreCard,addMoreList,updateListTitle}}>
+      <DragDropContext onDragEnd={onDragEnd}>
+
+      
     <div className = {classes.root}>
       
       {data.listIds.map((listId)=>{
@@ -84,6 +92,7 @@ export default function App(){
       })}
       <InputContainer type="list"/>
     </div>
+    </DragDropContext>
     </storeApi.Provider>
   );
 }
