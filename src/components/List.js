@@ -8,7 +8,7 @@ import InputCard from './Input/InputCard';
 
 const useStyle = makeStyles((theme)=>({
     root:{
-        width:'300px',
+        minWidth:'300px',
         backgroundColor:'#EBECF0',
         marginLeft: theme.spacing(1),
     },

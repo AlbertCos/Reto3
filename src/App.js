@@ -12,6 +12,8 @@ const useStyle = makeStyles((theme)=>({
     display:"flex",
     minheight:"100vh",
     background:"#383e56",
+    width:"100%",
+    overflowY:"auto",
   }
 }));
 
