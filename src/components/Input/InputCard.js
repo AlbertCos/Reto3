@@ -64,8 +64,10 @@ export default function InputCard({setOpen, listId, type}) {
                 <Button className={classes.btnConfirm} onClick={handleBtnConfirm}>
                     {type === "card" ? "+ Add Card" : "+ Add List" }
                 </Button>
-                <IconButton onClick={()=>setOpen(false)} ><ClearIcon/></IconButton>
+                <IconButton onClick={()=>setOpen(false)} >
+                <ClearIcon/>
+                </IconButton>
             </div>
         </div>
-    )
+    );
 }

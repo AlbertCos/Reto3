@@ -26,8 +26,8 @@ const useStyle = makeStyles((theme)=>({
         margin: theme.spacing(1),
         "&:focus":{
             backgroundColor:"#ddd",
-        }
-    }
+        },
+    },
 }));
 
 export default function Title({title,listId}) {
@@ -60,5 +60,5 @@ export default function Title({title,listId}) {
              </div>
             )}  
         </div>
-    )
+    );
 }

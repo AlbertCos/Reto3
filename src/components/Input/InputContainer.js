@@ -12,7 +12,7 @@ const useStyle = makeStyles((theme)=>({
         padding:theme.spacing(1,1,1,2),
         margin: theme.spacing(0,1,1,1),
         background:"#EBECF0",
-        "&:HOVER":{
+        "&:hover":{
             backgroundColor:fade("#000", 0.25),
         },
     },
@@ -34,5 +34,5 @@ export default function InputContainer({listId, type}) {
             </Paper>      
             </Collapse>
         </div>
-    )
+    );
 }

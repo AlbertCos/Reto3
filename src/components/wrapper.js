@@ -91,7 +91,7 @@ export default function Wrapper(){
     const draggingCard = sourceList.cards.filter((card)=>card.id === draggableId)[0];
 
     if(source.droppableId === destination.droppableId){
-      sourceList.cards.slice(source.index,1);
+      sourceList.cards.splice(source.index,1);
       destinationList.cards.splice(destination.index, 0, draggingCard);
       const newState ={
         ...data,
