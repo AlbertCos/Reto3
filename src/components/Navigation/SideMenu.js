@@ -51,6 +51,7 @@ export default function SideMenu({setOpenSideMenu,openSideMenu}){
                     // backgroundImage:"url",
                     backgroundRepeat:"no-repeat",
                     }}
+                    onClick={()=>{setOptionImage(true); setOptionColor(false);}}
                 ></div>
                 <div 
                     className={classes.box} 
@@ -59,9 +60,23 @@ export default function SideMenu({setOpenSideMenu,openSideMenu}){
                     // backgroundImage:"url",
                     backgroundRepeat:"no-repeat",
                     }}
-                    onClick={()=>setOptionColor(true)}
+                    onClick={()=>{setOptionColor(true); setOptionImage(false);}}
                 ></div>
             </div>
+            {optionImage ? <Grow in={optionImage}>
+                <div className={classes.optContainer}>
+                    {colors.map((color,index)=>{
+                        return(
+                            <div 
+                             key={index} className={classes.box} 
+                             style={{
+                             backgroundColor:color,
+                        }}></div>
+                    );
+                })}
+                </div>
+            </Grow> 
+            : //Else
             <Grow in={optionColor}>
                 <div className={classes.optContainer}>
                     {colors.map((color,index)=>{
@@ -74,7 +89,9 @@ export default function SideMenu({setOpenSideMenu,openSideMenu}){
                     );
                 })}
                 </div>
-            </Grow>
+            </Grow>}
+            
+            
         </div>
     </Drawer>
   </div>
