@@ -13,3 +13,7 @@ Drag and Drop:
 
 Background settings:
 
+![](https://github.com/AlbertCos/Reto3/blob/master/Backgroundimage.gif)
+
+
+
