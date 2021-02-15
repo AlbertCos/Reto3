@@ -6,6 +6,7 @@ Trello clone version is a task management webAPP. The app supports personal task
 
 ## Features
 Drag and Drop
-![](https://github.com/AlbertCos/Reto3/blob/master/output_1kknIj.gif) | ![](https://github.com/AlbertCos/Reto3/blob/master/Draganddrop2.gif)
+![](https://github.com/AlbertCos/Reto3/blob/master/output_1kknIj.gif)
+![](https://github.com/AlbertCos/Reto3/blob/master/Draganddrop2.gif)
 
 
