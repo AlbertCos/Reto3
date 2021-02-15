@@ -20,7 +20,7 @@ Background settings:
 
 ![](https://github.com/AlbertCos/Reto3/blob/master/Backgroundimage.gif)
 
-##Installation
+## Installation
 Install react, @material-ui and axio. 
 The webapp is using unsplash API for the background images, more information in https://unsplash.com/developers
 
