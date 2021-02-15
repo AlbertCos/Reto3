@@ -1,40 +1,11 @@
-<h1 align="center">
-<br>
-  <img src="YOUR_LOGO_URL" alt="YOUR_PROJECT_NAME" width="120">
-<br>
-<br>
-YOUR_PROJECT_NAME
-</h1>
+# Trello clone version, Reto3
+A clone of Trello (unsplash API, React, @material-ui and axio)
 
-<p align="center">A little description about your project</p>
-
-<p align="center">
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
-  </a>
-</p>
-
-[//]: # (Add your gifs/images here:)
-<div>
-  <img src="IMAGE_1_URL" alt="demo" height="425">
-  <img src="IMAGE_2_URL" alt="demo" height="425">
-</div>
-
-<hr />
+## Description
+Trello clone version is a task management webAPP. The app supports personal tasks boards, allowing to the user the modifification of the background, choosign plain colors or landscapes. The web app has also drag and Drop functionality, allowing to the user to move the tasks between different lists, and organize de panel moving also the cards.
 
 ## Features
-[//]: # (Add the features of your project here:)
-This app features all the latest tools and practices in mobile development!
-
-- ⚛️ **React Js** — A JavaScript library for building user interfaces
-- ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS
-- 💹 **Node Js** — A web framework for Node Js
-
-## Getting started
-
-Describe here the way to use/install your project
+Drag and Drop
+![] (output_1kknIj.gif)
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
