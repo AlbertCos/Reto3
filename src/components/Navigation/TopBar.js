@@ -22,7 +22,7 @@ export default function TopBar({setOpenSideMenu}){
   <div>
     <AppBar position="static" className={classes.AppBar} elevation={0}>
       <Toolbar>
-        <h1 className ={classes.title}>ToDo Today</h1>
+        <h1 className ={classes.title}>Trello</h1>
         <Button className={classes.btn} onClick={()=>setOpenSideMenu(true)}> 
         Background Settings
         </Button>

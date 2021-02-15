@@ -1,5 +1,5 @@
-import { Collapse, Paper, Typography } from '@material-ui/core'
-import React, { useState } from 'react'
+import { Collapse, Paper, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
 import{fade, makeStyles} from '@material-ui/core/styles';
 import InputCard from './InputCard';
 
@@ -29,7 +29,7 @@ export default function InputContainer({listId, type}) {
             <Collapse in={!open}>
             <Paper className={classes.addCard} elevation={0} onClick={()=>setOpen(!open)}>
                 <Typography>
-                {type === "card"? "+ Add a new Card" : "+ Add a new List"}
+                {type === "card"? "Add a new Card" : "Add a new List"}
                 </Typography>
             </Paper>      
             </Collapse>

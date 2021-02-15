@@ -11,7 +11,6 @@ const useStyle = makeStyles((theme)=>({
         width:"280px",
         margin:theme.spacing(0,1,1,1),
         paddingBottom:theme.spacing(4),
-        padding:theme.spacing(1,1,1,0),
     },
     input:{
         margin:theme.spacing(1),
@@ -20,12 +19,12 @@ const useStyle = makeStyles((theme)=>({
         background:"#5AAC44",
         color:"#fff",
         "&:hover":{
-            background:fade("#5AAC44",0.25),
-        }
+            background:fade("#5AAC44",0.75),
+        },
     },
     confirm:{
         margin:theme.spacing(0,1,1,1),
-    }
+    },
 }));
 
 export default function InputCard({setOpen, listId, type}) {
@@ -37,9 +36,8 @@ export default function InputCard({setOpen, listId, type}) {
         setTitle(e.target.value);
     };
     const handleBtnConfirm = () =>{
-        if(type==="card"){
+        if(type ==="card"){
             addMoreCard(title,listId);
-            //clean the title wrote, from the input tag.
             setTitle("");
             setOpen(false);
         }
@@ -48,7 +46,6 @@ export default function InputCard({setOpen, listId, type}) {
             setTitle("");
             setOpen(false);
         }
- 
     };
     //close and clean the tag when no active
  
@@ -62,9 +59,9 @@ export default function InputCard({setOpen, listId, type}) {
             </div>
             <div className={classes.confirm}>
                 <Button className={classes.btnConfirm} onClick={handleBtnConfirm}>
-                    {type === "card" ? "+ Add Card" : "+ Add List" }
+                    {type === "card" ? "Add Card" : "Add List" }
                 </Button>
-                <IconButton onClick={()=>setOpen(false)} >
+                <IconButton onClick={()=>setOpen(false)}>
                 <ClearIcon/>
                 </IconButton>
             </div>
